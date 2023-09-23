@@ -1,5 +1,8 @@
 import h5py
 import numpy as np
+import matplotlib.pyplot as plt
+
+
 
 def load_mood_datasets():
     
@@ -18,5 +21,25 @@ def load_mood_datasets():
     
     return train_set_x_orig, train_set_y_orig, test_set_x_orig, test_set_y_orig, classes
     
+
+def plot (history, which=1):
     
+    text = "accuracy" if which == 1 else "loss"
+    
+    plt.clf()
+
+    acc = history[text]
+    val_acc = history["val_"+text]
+    
+    epochs = range(1, len(acc) + 1)
+
+    plt.plot(epochs, acc, "bo", label="train "+ text)
+    plt.plot(epochs, val_acc, "b", label="validation " + text)
+
+    plt.xlabel("epoch")
+    plt.ylabel(text)
+
+
+    plt.legend()
+    plt.show()
     
