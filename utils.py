@@ -24,7 +24,7 @@ def load_mood_datasets():
 
 def plot (history, which=1):
     
-    text = "accuracy" if which == 1 else "loss"
+    text = "acc" if which == 1 else "loss"
     
     plt.clf()
 
