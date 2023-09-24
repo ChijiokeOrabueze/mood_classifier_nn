@@ -5,6 +5,9 @@ The data included 600 training and 160 validation/dev sets of 64 X 64 X 3 potrai
 
 These were then trained on various architectures and evaluated.
 
+##Data set
+This project comes with a h5 datasets of 600 training data and 160 test images of size 64 X 64 X 3.
+
 ## Model 1
 Model 1 was a simple densely connected deep network with 3 layers. 128 nodes on the 2 intermediate layers and 1 node for the output layer. The intermediate nodes used the relu activation while the output used the sigmoid activation and the binary crossentropy loss to output the probability that a given input image is either sad or a happy face.
 
